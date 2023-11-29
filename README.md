@@ -25,19 +25,24 @@ ray tracer written in pure c++, rendered to ppm file format
 ## Must Know Operations
 > in this section, I'll be going over the **must know mathematical concepts** that one must grasp to *understand the functionality of this ray tracer*.
 ### The Nature of Vectors
-**Three-dimensional (3D) vectors** are mathematical entities used to represent quantities that have both ***magnitude*** and ***direction*** in three-dimensional space. They are fundamental in various fields, including physi
+**Three-dimensional (3D) vectors** are mathematical entities used to represent quantities that have both ***magnitude*** and ***direction*** in three-dimensional space. They are fundamental in ray tracing, in a 3D space, ***objects, positions, directions, and movements*** are defined using coordinates and vectors. Three-dimensional vectors are used to represent points in space, directions of rays, positions of lights, positions of objects, and more.
 
 ### Vector Dot Products
 **The dot product**, also known as the scalar product, is an operation that takes two **3D vectors** and produces **a scalar** (single numerical value) as its result. The dot product is used to determine the similarity or alignment of two vectors and provides information about ***the angle*** between them. Here's how to calculate the dot product of two 3D vectors, typically denoted as A and B: 
 
 Given two 3D vectors: 
 
-A = (Ax, Ay, Az) 
+A = (Ax, Ay, Az) <br>
 B = (Bx, By, Bz) 
 
 The dot product A · B is computed as: A · B = Ax * Bx + Ay * By + Az * Bz
 
-![Thedotproduct](https://github.com/oskccy/raytracer_cpp/assets/149972489/052775a9-418e-4c57-bd3e-1044d5859d62)
+
+<p align="center">
+  <kbd>
+    <img src="https://github.com/oskccy/raytracer_cpp/assets/149972489/052775a9-418e-4c57-bd3e-1044d5859d62" alt="Thedotproduct" width="600">
+  </kbd>
+</p>
 
 
 ### Vector Cross Products
@@ -45,14 +50,20 @@ The dot product A · B is computed as: A · B = Ax * Bx + Ay * By + Az * Bz
 
 Given two 3D vectors: 
 
-A = (Ax, Ay, Az) 
+A = (Ax, Ay, Az) <br>
 B = (Bx, By, Bz) 
 
-The cross product A × B is computed as: 
+Calculate the x-component of the resulting vector: **Ay * Bz - Az * By**
 
-A × B = (Ay * Bz - Az * By, Az * Bx - Ax * Bz, Ax * By - Ay * Bx)
+Calculate the y-component of the resulting vector: **Az * Bx - Ax * Bz**
 
-![thecrossproduct6](https://github.com/oskccy/raytracer_cpp/assets/149972489/427d25e9-3e11-4da9-bedf-86d0c50b83fe)
+Calculate the z-component of the resulting vector: **Ax * By - Ay * Bx**
+
+<p align="center">
+  <kbd>
+    <img src="https://github.com/oskccy/raytracer_cpp/assets/149972489/427d25e9-3e11-4da9-bedf-86d0c50b83fe" alt="thecrossproduct6" width="500">
+  </kbd>
+</p>
 
 
 ### Vector Reflection Equation
@@ -66,7 +77,11 @@ A × B = (Ay * Bz - Az * By, Az * Bx - Ax * Bz, Ax * By - Ay * Bx)
 
 The normalized vector reflection equation is typically expressed as follows: **R** = **I** - 2 * (**I** · **N**) * **N**
 
-![normalizedvector](https://github.com/oskccy/raytracer_cpp/assets/149972489/ba537c47-a75e-4959-93b6-52fee3aa2434)
+<p align="center">
+  <kbd>
+    <img src="https://github.com/oskccy/raytracer_cpp/assets/149972489/ba537c47-a75e-4959-93b6-52fee3aa2434" alt="normalizedvector" width="450">
+  </kbd>
+</p>
 
 
 ## Project Functionality
